@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* text-transform: capitalize; */
+    outline: none;
+    border: none;
+    font-family: 'Tangerine', cursive;
+}
+
+
+/* ----------------------- loading --------------------- */
+
+.loading {
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    position: fixed;
+    z-index: 10000;
+}
+
+.loading .content {
+    position: absolute;
+    top: calc(50% - 270px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 460px;
+}
+
+.loading .content .img {
+    z-index: 10;
+}
+
+.loading .content .tim {
+    position: absolute;
+    top: calc(50% - -30px);
+    left: calc(50% - 35px);
+}
+
+.loading .content .tim:nth-child(2) {
+    width: 134px;
+    height: 130px;
+    left: calc(50% - 51px);
+    background: black;
+    animation: tim 3s infinite;
+    z-index: 10;
+}
+
+.loading .anh {
+    z-index: 1000;
+    position: absolute;
+    top: 33px;
+    left: 35px;
+    height: 400px;
+    width: 420px;
+    background: url(./image/nhan-vat-2.png) center center / contain no-repeat;
+}
+
+
+/* @keyframes tim {
+    0%,
+    100% {
+        clip-path: polygon(100% 0, 0 0, 0 89%, 12% 94%, 24% 95%, 34% 92%, 41% 85%, 50% 79%, 61% 75%, 71% 74%, 82% 75%, 91% 78%, 100% 84%);
+    }
+    50% {
+        clip-path: polygon(100% 0, 0 0, 0 84%, 13% 76%, 23% 73%, 35% 71%, 47% 74%, 55% 80%, 62% 87%, 71% 91%, 83% 93%, 93% 91%, 100% 87%);
+    }
+} */
+
+@keyframes tim {
+    0%,
+    100% {
+        clip-path: polygon(0% 0%, 97% 3%, 99% 86%, 90% 94%, 81% 97%, 69% 98%, 58% 95%, 47% 89%, 36% 87%, 24% 88%, 10% 93%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0% 0%, 97% 3%, 99% 100%, 90% 94%, 79% 90%, 68% 89%, 55% 91%, 45% 95%, 34% 97%, 22% 96%, 11% 92%, 0 86%);
+    }
+}
+
+.loading .content .percent {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top: calc(50% - -69px);
+    left: calc(50% - 42px);
+    font-size: 28px;
+    width: 112px;
+    height: 30px;
+    text-align: center;
+}
+
+.loading .content .tim:nth-child(1) .left,
+.loading .content .tim:nth-child(1) .right {
+    background: red;
+}
+
+.loading .content .tim .left {
+    position: absolute;
+    width: 74px;
+    height: 110px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: #eeeeee;
+    transform: rotate(-45deg);
+}
+
+.loading .content .tim .right {
+    left: 26px;
+    position: absolute;
+    width: 74px;
+    height: 110px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: #eeeeee;
+    transform: rotate(45deg);
+}
+
+.loading .content .tim:nth-child(2) .left {
+    left: 16px;
+}
+
+.loading .content .tim:nth-child(2) .right {
+    left: 42px;
+}
+
+.loading .heading {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 60px);
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+.loading .heading::after {
+    content: '';
+    left: 74%;
+    position: absolute;
+    width: 49px;
+    height: 100%;
+    background: black;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(49px);
+    }
+}
+
+
+/* -------------------- content -------------------- */
+
+#content {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./image/nen-2.jpg) center center / cover;
+}
+
+#content .chims {
+    position: absolute;
+    animation: chims 4s linear infinite;
+    z-index: 10;
+}
+
+@keyframes chims {
+    0% {
+        left: -300px;
+        top: 0;
+    }
+    100% {
+        left: 100%;
+        top: 200px;
+    }
+}
+
+#content .mays {
+    position: absolute;
+    top: 50px;
+    z-index: 5;
+    opacity: 0.8;
+    animation: mays 30s linear infinite;
+}
+
+#content .mays .may-2 {
+    position: absolute;
+    top: 10%;
+    left: 172px;
+}
+
+#content .mat-troi {
+    position: absolute;
+    right: 169px;
+    top: 131px;
+    background: #ee8c00;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ee8c00, 0 0 100px #ee8c00, 0 0 150px #ee8c00, 0 0 200px #ee8c00, 0 0 250px #ee8c00;
+}
+
+@keyframes mays {
+    0% {
+        left: -500px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#content .chim {
+    position: absolute;
+    height: 36px;
+    width: 89px;
+    top: 100px;
+    left: 100px;
+    transform: rotateZ(-12deg);
+    background: url(./image/chim/chim.jpg) center center / contain no-repeat;
+}
+
+#content .chim-1 {
+    top: 29px;
+    left: -24px;
+}
+
+#content .chim-2 {
+    top: 171px;
+    left: -24px;
+}
+
+#content .chim .canh-trai {
+    position: absolute;
+    height: 119px;
+    width: 32px;
+    top: calc(50% - 64px);
+    left: calc(50% - 7px);
+    z-index: 10;
+    animation: canh-trai 1s linear infinite;
+}
+
+#content .chim .canh-trai::before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(./image/chim/canh-trai.png) center center / contain no-repeat;
+}
+
+#content .chim .canh-phai {
+    position: absolute;
+    height: 119px;
+    width: 32px;
+    top: calc(50% - 50px);
+    left: calc(50% - 15px);
+    animation: canh-phai 1s linear infinite;
+}
+
+#content .chim .canh-phai::before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: url(./image/chim/canh-phai.png) center center / contain no-repeat;
+}
+
+@keyframes canh-trai {
+    0%,
+    100% {
+        transform: rotateX(-159deg);
+    }
+    50% {
+        transform: rotateX(-26deg);
+    }
+}
+
+@keyframes canh-phai {
+    0%,
+    100% {
+        transform: rotateX(58deg);
+    }
+    50% {
+        transform: rotateX(-89deg);
+    }
+}
+
+#content .people {
+    position: absolute;
+    top: calc(50% - -21px);
+    left: 166px;
+    width: 328px;
+}
+
+#content .people img {
+    width: 100%;
+}
+
+#content .text {
+    position: absolute;
+    top: calc(50% - 85px);
+    left: 115px;
+    z-index: 10;
+}
+
+#content .text div:first-child {
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 5px;
+    inset: -5px;
+}
+
+#content .text .text-1 {
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: inset -10px 11px 15px #5cb0bd, inset 11px -10px 15px #f5ec00bf;
+    font-family: 'Tangerine', cursive;
+    background: skyblue;
+    /* width: 100%; */
+    width: 430px;
+    height: 102px;
+    overflow: hidden;
+}
+
+#content .text .text-1 h1 {
+    animation: tim 3s linear infinite;
+    font-size: 50px;
+    font-weight: 700;
+    width: 105%;
+    height: 63px;
+    overflow: hidden;
+    text-shadow: 4px 3px 5px #474747;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@keyframes text {
+    0% {
+        width: 0%;
+        clip-path: polygon(0 0, 0 100%, 51% 100%, 51% 88%, 53% 76%, 57% 61%, 57% 48%, 54% 35%, 52% 26%, 50% 16%, 49% 8%, 49% 0);
+    }
+    50% {
+        width: 100%;
+        clip-path: polygon(0 0, 0 100%, 51% 100%, 57% 88%, 58% 77%, 54% 64%, 50% 54%, 49% 40%, 52% 30%, 54% 18%, 53% 9%, 49% 0);
+    }
+    100% {
+        width: 200%;
+        clip-path: polygon(0 0, 0 100%, 51% 100%, 51% 88%, 53% 76%, 57% 61%, 57% 48%, 54% 35%, 52% 26%, 50% 16%, 49% 8%, 49% 0);
+    }
+}
+
+
+/* ------------------------ button ------------------------- */
+
+.btns {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    height: 200px;
+    width: 200px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.btns .btn {
+    position: absolute;
+    padding: .5rem 3.5rem;
+    font-size: 5.5rem;
+    min-width: 140px;
+    z-index: 10;
+}
+
+.btns .btn div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: -3px;
+    background: #ee8c00;
+    z-index: -1;
+}
+
+.btns .btn:first-child {
+    top: 5%;
+    left: 5%;
+    background: red;
+}
+
+.btns .btn:last-child {
+    top: 5%;
+    left: 150%;
+    background: orange;
+}
+
+.btns .btn:hover::before {
+    /* animation: btnHover 1s linear; */
+    background: radial-gradient(#fff0 100%, #a0a0a02e 0%);
+}
+
+.btns .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#fff0 0%, #a0a0a02e 0%);
+    transition: all 2s linear;
+}
+
+@keyframes btnHover {
+    0% {
+        background: radial-gradient(#fff0 0%, #000000a8 0%);
+    }
+    100% {
+        display: none;
+        background: radial-gradient(#fff0 50%, #000000a8 0%);
+    }
+}
+
+.test {
+    top: 50%;
+    position: absolute;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(#fff0 0%, #000000a8 0%);
+    animation: btnHover 3s linear infinite;
+}

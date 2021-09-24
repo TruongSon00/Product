@@ -1,0 +1,36 @@
+@media (max-width:739px) {
+    #header {
+        height: 46px;
+        overflow: hidden;
+    }
+    #header .row .pc {
+        float: none;
+    }
+    #header .row .main {
+        display: inline-block;
+    }
+    #header .search,
+    #header .daddy .more {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    #header .row .mobile {
+        display: block;
+    }
+    #band .row .col {
+        width: 100%;
+    }
+    #ticket .place {
+        width: 100%;
+        padding-top: 20px;
+    }
+    #contact .mailto .address,
+    .mailto .email {
+        width: 100%;
+    }
+    #contact .mailto .address {
+        padding: 10px 0 20px 6px;
+    }
+}

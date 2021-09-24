@@ -1,0 +1,328 @@
+html {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-sa
+}
+
+
+/* common */
+
+.clear {
+    clear: both;
+}
+
+.col-third {
+    width: 33.333%;
+}
+
+.col {
+    float: left;
+}
+
+.menu,
+.mobile {
+    display: none;
+}
+
+
+/* end common */
+
+#header {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#header .daddy .col {
+    position: relative;
+    padding: 12px 24px;
+}
+
+#header .child .col {
+    width: 100%;
+}
+
+#header .col a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+#header .col:hover,
+#header .menu:hover {
+    background-color: #ccc;
+}
+
+#header .col:hover .child {
+    display: block;
+}
+
+#header .col:hover a,
+#header .menu:hover {
+    color: black;
+}
+
+#header .child {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(4, 43, 34, 0.4);
+    top: 46px;
+    left: 0;
+}
+
+#header .search,
+#header .menu {
+    float: right;
+    color: white;
+    line-height: 1em;
+    padding: 16px 24px;
+    font-size: 14px;
+}
+
+#header .search:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#sider {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 50%;
+    background: url(/trang_web_3wschool/assets/img/nen.1.jpg) top center / cover no-repeat;
+}
+
+#sider .text {
+    position: absolute;
+    text-align: center;
+    bottom: 45px;
+    width: 100%;
+    color: white;
+}
+
+#band,
+#tour,
+#contact,
+#footer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 74px 16px;
+}
+
+#content .slogan {
+    text-align: center;
+    margin-bottom: 15px;
+    display: block;
+    opacity: 0.6;
+}
+
+#content .heading-content {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#band .text-content {
+    text-align: justify;
+}
+
+#band .row {
+    padding-top: 32px;
+}
+
+#band .row .col {
+    text-align: center;
+}
+
+#band .row .text {
+    padding: 15px 0;
+}
+
+#daddy-tour,
+#month li .ticket-con {
+    background-color: black;
+    color: white;
+}
+
+#month {
+    padding: 25px 0;
+}
+
+#month li {
+    line-height: 40px;
+    background-color: white;
+    color: grey;
+    border-bottom: 1pt solid #ccc;
+    padding: 0 16px;
+    list-style-type: none;
+}
+
+#month li .sold-out {
+    background-color: #f44336;
+    padding: 0 8px;
+    margin-left: 16px;
+    color: white;
+}
+
+#month li .ticket-con {
+    float: right;
+    padding: 0 8px;
+    border-radius: 50%;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+#ticket {
+    margin: 0 -8px;
+}
+
+#ticket .place {
+    background-clip: content-box;
+    width: 33.333%;
+    background-color: white;
+    color: black;
+    float: left;
+    padding: 0 8px;
+}
+
+#ticket .place img:hover {
+    opacity: 0.7;
+}
+
+#ticket .place div {
+    padding: 16px;
+}
+
+#ticket .place span {
+    margin: 16px 0;
+    display: block;
+    opacity: 0.6;
+}
+
+#ticket .place p {
+    font-size: 15px;
+}
+
+#ticket .place button,
+.email .submit {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    line-height: 22px;
+    margin-top: 15px;
+    border: none;
+}
+
+#ticket .place button:hover,
+.email .submit:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+#main #buy-ticket {
+    display: none;
+    position: fixed;
+    background-color: #f44336;
+    height: 400px;
+    width: 100%;
+    padding: 0 10%;
+    top: 100px;
+    background-clip: content-box;
+}
+
+#contact .mailto {
+    padding: 26px 0;
+}
+
+#contact .mailto .address,
+.mailto .email {
+    width: 49.999%;
+    float: left;
+}
+
+#contact .mailto .address {
+    padding-top: 10px;
+}
+
+#contact .address li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#contact .address i {
+    width: 30px;
+}
+
+.email .anh .child {
+    width: 49.99%;
+    float: left;
+    padding: 4px;
+}
+
+.email .em {
+    padding: 0 4px;
+}
+
+.email .em input,
+.email .child input {
+    border: 1px solid #ccc;
+    height: 40px;
+    padding-left: 8px;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.email .submit {
+    float: right;
+    margin-right: 4px;
+}
+
+#content #image-end {
+    filter: grayscale(50%);
+}
+
+#footer i {
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+#footer p {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+#footer a {
+    color: black;
+}
+
+#footer div {
+    width: 143px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width:740px) and (max-width:1024px) {
+    #band,
+    #tour,
+    #contact,
+    #footer {
+        max-width: 740px;
+    }
+}

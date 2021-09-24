@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+    background: url(https://cdn.pixabay.com/photo/2016/04/20/19/47/wolves-1341881_960_720.jpg)center / cover fixed;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.notifi {
+    position: fixed;
+    left: 390px;
+    width: 580px;
+    display: none;
+    padding: 20px;
+    line-height: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px #333;
+    border-left: 4px solid #ff0000;
+}
+
+.notifi i:first-child {
+    font-size: 24px;
+    color: #ff0000;
+}
+
+.notifi i:last-child {
+    font-size: 20px;
+}
+
+#log-in {
+    margin: 120px auto 0;
+    width: 460px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px #333;
+}
+
+.right {
+    transform: translateX(980px);
+    animation: appearRight 5s;
+}
+
+.left {
+    transform: translateX(-973px);
+    animation: appearLeft 5s;
+}
+
+@keyframes appearLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-973px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-973px);
+    }
+}
+
+@keyframes appearRight {
+    0% {
+        opacity: 0;
+        transform: translateX(980px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(980px);
+    }
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+    line-height: 48px;
+    background: #c0c0c0;
+    border-radius: 10px;
+    border: 1px solid #333;
+    outline: none;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+#log-in a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #000cd0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #333;
+}
+
+#log-in .submit {
+    background: #0000FF;
+    color: #ffffff;
+    margin-bottom: 28px;
+    border: none;
+}
+
+#log-in .add {
+    background: #7CFC00;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+}

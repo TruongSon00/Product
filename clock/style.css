@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    text-transform: capitalize;
+}
+
+body {
+    background: gray;
+}
+
+.heading {
+    font-family: 'Tangerine', cursive;
+    font-size: 5rem;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.heading span {
+    color: #ff0000;
+}
+
+.clock {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #2e2e2e;
+    box-shadow: inset 0 15px 15px #120909, inset 0 -15px 15px #cccccc63;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clock img {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    top: -6%;
+    left: -3%;
+    width: 106%;
+    height: 109%;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    background: linear-gradient(#ccc, #000);
+}
+
+.clock .logo {
+    position: absolute;
+    top: 19px;
+    left: 35px;
+    background-image: url(./logo.png);
+    width: 97px;
+    height: 62px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.clock .tam {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.clock .tam::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10000;
+}
+
+.clock .tam .hour {
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    top: -37px;
+    left: 6px;
+}
+
+.clock .tam .hour::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 39px;
+    border-radius: 8px;
+    background: #ff0000;
+}
+
+.clock .tam .minute {
+    position: absolute;
+    width: 2px;
+    height: 110px;
+    top: -47px;
+    left: 7px;
+}
+
+.clock .tam .minute::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 49px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.clock .tam .second {
+    position: absolute;
+    width: 1px;
+    height: 130px;
+    top: -57px;
+    left: 7.5px;
+}
+
+.clock .tam .second::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 88px;
+    border-radius: 8px;
+    background: #fff;
+}

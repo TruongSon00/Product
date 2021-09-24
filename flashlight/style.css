@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    transition: .7s linear;
+    background: #161616;
+}
+
+body.active {
+    background: #272727;
+}
+
+html {
+    font-size: 62.5%;
+    text-transform: capitalize;
+}
+
+.heading {
+    font-family: 'Tangerine', cursive;
+    font-size: 5rem;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+
+/* .buld  {
+font-size: 5rem;
+color: white;
+transform: rotate(180deg);
+font-weight: bold;
+} */
+
+.buld {
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: -146px;
+    right: 35%;
+}
+
+.buld::after {
+    width: 2px;
+    height: 180px;
+    content: '';
+    top: -61%;
+    left: 100px;
+    background: black;
+    position: absolute;
+}
+
+.buld .background {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    background: transparent;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.buld .chuoi::after {
+    position: absolute;
+    top: 13px;
+    left: 0px;
+    content: '';
+    background: #a8a8a8;
+    width: 20px;
+    height: 18px;
+    z-index: 2;
+}
+
+.buld.active .chuoi::after {
+    background: white;
+}
+
+.buld .chuoi {
+    position: absolute;
+    top: 49px;
+    left: 90px;
+    content: '';
+    background: #000000;
+    width: 20px;
+    height: 13px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+}
+
+.buld .bong {
+    background: #a8a8a8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    content: '';
+    top: 38%;
+    left: 38%;
+    position: absolute;
+    z-index: 2;
+}
+
+.buld .bong div {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: red;
+}
+
+.buld .bong div:first-child {
+    top: 1px;
+    left: 1px;
+}
+
+.buld .bong div:first-child {
+    background: transparent;
+    top: -8px;
+    left: 2.2px;
+    transform: rotate( 338deg);
+    box-shadow: 7px 7px 0 4px #a8a8a8;
+    border-bottom-right-radius: 104%;
+}
+
+.buld .bong div:last-child {
+    background: transparent;
+    top: -8px;
+    right: 3.7px;
+    transform: rotate( 107deg);
+    box-shadow: 7px 7px 0 4px #a8a8a8;
+    border-bottom-right-radius: 104%;
+}
+
+.buld .bong::after {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.buld.active .bong div:first-child,
+.buld.active .bong div:last-child {
+    box-shadow: 7px 7px 0 4px #fff;
+}
+
+.buld.active .bong {
+    /* filter: blur(10px); */
+    background: #fff;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff;
+}
+
+.buld.active .bong:after {
+    filter: blur(40px);
+    content: '';
+    background: #fff;
+}
+
+.switch {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 2px solid #1c1c1c;
+    border-radius: .5rem;
+}
+
+.switch .btn {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 10px);
+    border: 2px solid #1c1c1c;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem .5rem rgba(0, 0, 0, .3);
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.switch .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: transparent;
+    background: linear-gradient( 0deg, transparent, #3a3a3a);
+}
+
+.switch .btn.active::after {
+    top: calc(100% - 6px);
+    background: linear-gradient( 180deg, transparent, #3a3a3a);
+}
