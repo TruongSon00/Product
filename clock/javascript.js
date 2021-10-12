@@ -4,7 +4,7 @@ const hour = 30,
 
 
 function clock() {
-    var t = new Date()
+      var t = new Date()
     var hours = t.getHours()
     var minutes = t.getMinutes()
     var seconds = Math.floor(t.getSeconds())
